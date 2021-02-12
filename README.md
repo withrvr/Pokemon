@@ -4,7 +4,7 @@
 
 -   Because of the big fan of pokemon
 -   and as a programmer thinking what to do
--   So create a project on pokemon Pokedex
+-   So started creating a project on pokemon Pokedex
 
 ### Official sites
 
