@@ -1,3 +1,8 @@
+# python cache file
 __pycache__
 
+# vs code settings
 .vscode
+
+# ny testing folder files
+z-testing

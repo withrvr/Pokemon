@@ -1,0 +1,25 @@
+{% extends "pages/base_page.html" %}
+<!-- title -->
+{% block title %}{{ title }}{% endblock title %}
+
+<!-- content -->
+{% block content %}
+<!-- start of content -->
+pokemon ( Pokedex )
+<br /><br />
+<br /><br />
+<!-- loading the app_filters ... for.... get_pokemon_id_from_url_ending -->
+{% load app_filters %}
+<!-- looping over all the pokemon -->
+{% for pokemon in pokemons %}
+<!-- getting pokemon name -->
+<a
+	href="/info/pokemon/{{ pokemon.url | get_pokemon_id_from_url_ending }}/"
+	target="_blank"
+>
+	{{ pokemon.name }}
+</a>
+<br />
+{% endfor %} ...ending...
+<!-- end of content -->
+{% endblock content %}
