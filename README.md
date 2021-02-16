@@ -15,11 +15,10 @@
 -   [Pokemon Official Site](https://www.pokemon.com/us/)
 -   [Pokemon API I am using](https://pokeapi.co/)
 
-# How to execute
+# How to execute ( or Steps to Follow)
 
--   step 0: Fork and pull or download this repo
--   step 1: Download python and django
--   step 2: In terminal go to base directroy /pokemon-django-code/
--   step 3: python manage.py runserver
--   step 4: try some urls like /info/pokemon/ or /info/pokemon/{pokemon_id}
--
+-   Fork and pull or download this repo
+-   Download python and django
+-   In terminal go to base directroy /pokemon-django-code/
+-   python manage.py runserver
+-   try some urls like /info/pokemon/ or /info/pokemon/{pokemon_id}
