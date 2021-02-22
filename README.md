@@ -1,4 +1,4 @@
-# I am trying to make my own Pokemon-Pokedex and realted to pokemon
+# I am trying to make my own Pokemon-Pokedex and related to pokemon
 
 -   Because of the big fan of pokemon
 -   and as a programmer thinking what to do
