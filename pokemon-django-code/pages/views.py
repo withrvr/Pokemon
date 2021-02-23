@@ -5,7 +5,10 @@ import requests
 
 # home page
 def home_view(request, *args, **kwargs):
-    return render(request, 'pages/home_page.html', {"title": "Home Page", })
+    context = {
+        "title": "Home Page",
+    }
+    return render(request, 'pages/home_page.html', )
 
 
 # ------------------------ pokemon --------------------------------
