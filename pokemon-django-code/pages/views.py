@@ -30,14 +30,21 @@ def pokemon_id_info_view(request, pokemon_id_from_url, *args, **kwargs):
         ).json()
 
     except Exception as e:
+        print(e)
+
+        # to count number of pokemon ids there
         count = requests.get(
-            f"https://pokeapi.co/api/v2/pokemon?limit=1&offset=2000"
+            f"https://pokeapi.co/api/v2/pokemon?offset=2000000"
         ).json()["count"]
 
         return HttpResponse(
-            f"""<h4>No pokemon with --> <i>ID #{pokemon_id_from_url}</i></h4>
-            Try some less <b>ID</b> Pokemon because<br/>
-            <h3>There are Pokemon up Till --> <i>ID #{count}</i> only</h3>
+            f"""
+            <h4>&nbsp;</h4>
+            <h4>No pokemon with --> <i>ID ( #{pokemon_id_from_url} ) </i></h4>
+            <h4>There are in all --> { count } <-- pokemons</h4>
+            <h4>but</h4>
+            <h4>Pokemon id can be greater than or less than --> { count } <-- ... Okay</h4>
+
         """)
 
     # name of pokemon

@@ -54,7 +54,14 @@
 </table>
 
 <h2>Stats of Pokemon</h2>
-<ul></ul>
+<table border="1">
+	{% for stat in pokemon.stats %}
+	<tr>
+		<td>{{ stat.stat.name }}</td>
+		<td>{{ stat.base_stat }}</td>
+	</tr>
+	{% endfor %}
+</table>
 
 <!-- end of content -->
 {% endblock content %}
