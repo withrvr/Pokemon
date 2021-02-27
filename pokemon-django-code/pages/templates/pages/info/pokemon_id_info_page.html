@@ -4,20 +4,21 @@
 <title>{{ title }}</title>
 <link
 	rel="icon"
-	href="{{ pokemon.sprites.other.dream_world.front_default }}"
+	href="{{ official_artwork_image }}"
 	alt="Web Page LOGO of -- {{ title }}"
 />
 {% endblock head %}
-<!-- content -->
+
 <!-- content -->
 {% block content %}
 <!-- start of content -->
 
+<!-- official_artwork_image ...."official-artwork" ... not work in templete so specail variable created -->
 <img
-	src="{{ pokemon.sprites.other.dream_world.front_default }}"
-	alt="Anima ( Dream_world ) - svg - Image of Pokemon - ( {{ name }} ) - whos id is - ( {{ pokemon_id }} ) .."
-	width="300"
-	height="300"
+	src="{{ official_artwork_image }}"
+	alt="Artwork Image of Pokemon - ( {{ name }} ) - whos id is - ( {{ pokemon_id }} ) .."
+	width=""
+	height=""
 />
 
 <!-- displays basic information related to pokemon like height, weight, ....,etc -->
@@ -51,7 +52,7 @@
 	</tr>
 </table>
 
-<!-- displays Stss information related to pokemon -->
+<!-- displays Stas information related to pokemon -->
 <h2>Stats of Pokemon</h2>
 <table border="1">
 	{% for stat in pokemon.stats %}

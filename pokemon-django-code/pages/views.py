@@ -24,6 +24,11 @@ def pokemon_info_view(request, *args, **kwargs):
 
 # id - pokemon - info
 def pokemon_id_info_view(request, pokemon_id_from_url, *args, **kwargs):
+    # add comman content here
+    context = {
+        "pokemon_id": pokemon_id_from_url,
+    }
+
     try:
         pokemon = requests.get(
             f"https://pokeapi.co/api/v2/pokemon/{pokemon_id_from_url}/"
@@ -37,29 +42,30 @@ def pokemon_id_info_view(request, pokemon_id_from_url, *args, **kwargs):
             f"https://pokeapi.co/api/v2/pokemon?offset=2000000"
         ).json()["count"]
 
-        return HttpResponse(
-            f"""
-            <h4>&nbsp;</h4>
-            <h4>No pokemon with --> <i>ID ( #{pokemon_id_from_url} ) </i></h4>
-            <h4>There are in all --> { count } <-- pokemons</h4>
-            <h4>but</h4>
-            <h4>Pokemon id can be greater than or less than --> { count } <-- ... Okay</h4>
+        context = {
+            **context,
 
-        """)
+            "count": count,
+            "title": f"No Pokemon with - ID (#{pokemon_id_from_url})",
+        }
+
+        return render(request, 'pages/info/no_pokemon_with_id.html', context)
 
     # name of pokemon
     name = pokemon["name"].capitalize()
 
     # context to go on templete
     context = {
+        **context,
 
         "pokemon": pokemon,
         "name": name,
         "title": f"{ name } (#{ pokemon_id_from_url }) - Pokemon Info",
         "pokemon_id": pokemon_id_from_url,
 
-        # foo-images-tag-more.html ..... extra images is used then uncomment this variable
-        # "official_artwork_image": pokemon["sprites"]["other"]["official-artwork"]["front_default"],
+        # foo-images-tag-more.html .... for more
+        # official_artwork_image .... this work for all images of pokemon ....
+        "official_artwork_image": pokemon["sprites"]["other"]["official-artwork"]["front_default"],
 
     }
     return render(request, 'pages/info/pokemon_id_info_page.html', context)
