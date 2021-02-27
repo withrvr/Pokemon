@@ -1,13 +1,18 @@
 {% extends "pages/base_page.html" %}
-<!-- title -->
-{% block title %}{{ title }}{% endblock title %}
-
+<!-- head -->
+{% block head %}
+<title>{{ title }}</title>
+<link
+	rel="icon"
+	href="{{ pokemon.sprites.other.dream_world.front_default }}"
+	alt="Web Page LOGO of -- {{ title }}"
+/>
+{% endblock head %}
 <!-- content -->
 <!-- content -->
 {% block content %}
 <!-- start of content -->
 
-<!-- anima svg image best ... but dont work after #650 pokemon id -->
 <img
 	src="{{ pokemon.sprites.other.dream_world.front_default }}"
 	alt="Anima ( Dream_world ) - svg - Image of Pokemon - ( {{ name }} ) - whos id is - ( {{ pokemon_id }} ) .."
@@ -15,14 +20,7 @@
 	height="300"
 />
 
-<!-- official_artwork_image ...."official-artwork" ... not work in templete so specail variable created -->
-<img
-	src="{{ official_artwork_image }}"
-	alt="Artwork Image of Pokemon - ( {{ name }} ) - whos id is - ( {{ pokemon_id }} ) .."
-	width="300"
-	height="300"
-/>
-
+<!-- displays basic information related to pokemon like height, weight, ....,etc -->
 <h2>Basic information</h2>
 <table border="1">
 	<tr>
@@ -53,6 +51,7 @@
 	</tr>
 </table>
 
+<!-- displays Stss information related to pokemon -->
 <h2>Stats of Pokemon</h2>
 <table border="1">
 	{% for stat in pokemon.stats %}

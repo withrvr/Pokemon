@@ -1,10 +1,21 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>{% block title %}{{ title }}{% endblock title %}</title>
+
+		<!-- head -->
+		{% load static %} {% block head %}
+		<title>{{ title }}</title>
+		<link
+			rel="icon"
+			href="{% static 'pages/Images/pokemon_main_logo.ico' %}"
+			alt="Web Page LOGO of -- {{ title }}"
+		/>
+		{% endblock head %}
 	</head>
 	<body>
 		{% block content %} this is default text?? {% endblock content %}

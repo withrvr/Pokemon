@@ -5,6 +5,8 @@
 
 # to develope
 
+-   page icon of all website
+-   ......
 -   Home page ( not developed )
 -   previous and next button in /info/pokemon/
 -   type, states and beeries ....

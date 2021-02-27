@@ -8,7 +8,7 @@ def home_view(request, *args, **kwargs):
     context = {
         "title": "Home Page",
     }
-    return render(request, 'pages/home_page.html', )
+    return render(request, 'pages/home_page.html', context)
 
 
 # ------------------------ pokemon --------------------------------
@@ -55,11 +55,11 @@ def pokemon_id_info_view(request, pokemon_id_from_url, *args, **kwargs):
 
         "pokemon": pokemon,
         "name": name,
-        "title": f"{ name } (#{ pokemon_id_from_url }) Pokemon Info",
+        "title": f"{ name } (#{ pokemon_id_from_url }) - Pokemon Info",
         "pokemon_id": pokemon_id_from_url,
 
-        # images-tag-more.html extra images is used then uncomment this variable
-        "official_artwork_image": pokemon["sprites"]["other"]["official-artwork"]["front_default"],
+        # foo-images-tag-more.html ..... extra images is used then uncomment this variable
+        # "official_artwork_image": pokemon["sprites"]["other"]["official-artwork"]["front_default"],
 
     }
     return render(request, 'pages/info/pokemon_id_info_page.html', context)

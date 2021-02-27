@@ -1,5 +1,8 @@
+from django.conf.urls import url
 from django.urls import path
 from .views import *
+
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     # home page
@@ -31,3 +34,6 @@ urlpatterns = [
     ),
 
 ]
+
+
+urlpatterns += staticfiles_urlpatterns()
