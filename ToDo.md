@@ -1,7 +1,7 @@
 # Errors
 
 -   convert hight from md to inches and foot
--   pokemon svg image is shown till id #649
+-   redirect ... ids and name ... properly like lower the case ...etc
 
 # to develope
 
