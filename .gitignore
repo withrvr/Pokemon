@@ -5,7 +5,9 @@ __pycache__
 .vscode
 
 # ny testing folder files
-z-testing
+z_testing
+
+Pokemon_Django_Code\z_testing
 
 # foo-images-tag-more.html can use alternate image tag
-# Pokemon-Django-Code\pages\templates\pages\info\foo-images-tag-more.html
+# Pokemon_Django_Code\pages\templates\pages\info\foo-images-tag-more.html
