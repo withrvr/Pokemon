@@ -6,7 +6,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     # home page
-    path('', home_view, name=''),
+    path('', home_view, name='home'),
     path('home/', home_view, name='home'),
 
     # info of pokemons and individual by id

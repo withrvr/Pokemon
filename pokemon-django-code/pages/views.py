@@ -5,12 +5,15 @@ import requests
 
 # home page
 def social_media_view(request, social_media_from_url, *args, **kwargs):
-    redirect_url = '/home/'
+    # redirect to home page if any path not find
+    # this one is for home page .... main page
+    redirect_url = ''
 
-    if social_media_from_url in ["youtube", "yt"]:
-        redirect_url = f"https://www.youtube.com/techwithrvr"
-    elif social_media_from_url in ["twitter", "facebook", "instagram", ]:
-        redirect_url = f"https://www.{social_media_from_url}.com/withrvr"
+    check_if_this_sm = ["youtube", "yt", "twitter",
+                        "facebook", "instagram", "fb", "insta"
+                        ]
+    if social_media_from_url in check_if_this_sm:
+        redirect_url = f"https://tapmybio.com/withrvr"
 
     return redirect(redirect_url)
 
