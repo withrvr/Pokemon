@@ -1,9 +1,22 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.http import HttpResponse
 import requests
 
 
 # home page
+def social_media_view(request, social_media_from_url, *args, **kwargs):
+    redirect_url = '/home/'
+
+    if social_media_from_url in ["youtube", "yt"]:
+        redirect_url = f"https://www.youtube.com/techwithrvr"
+    elif social_media_from_url in ["twitter", "facebook", "instagram", ]:
+        redirect_url = f"https://www.{social_media_from_url}.com/withrvr"
+
+    return redirect(redirect_url)
+
+# home page
+
+
 def home_view(request, *args, **kwargs):
     context = {
         "title": "Home Page",
@@ -69,6 +82,11 @@ def pokemon_id_info_view(request, pokemon_id_from_url, *args, **kwargs):
 
     }
     return render(request, 'pages/info/pokemon_id_info_page.html', context)
+
+
+# name - pokemon - info
+def pokemon_name_info_view(request, pokemon_name_from_url, *args, **kwargs):
+    return redirect('https://www.google.com/')
 
 
 # ------------------------ type --------------------------------
