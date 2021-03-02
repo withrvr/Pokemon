@@ -39,7 +39,8 @@ def pokemon_info_view(request, *args, **kwargs):
 
 
 # id - pokemon - info
-def pokemon_id_info_view(request, pokemon_id_from_url, *args, **kwargs):
+def pokemon_id_info_view(request, pokemon_id_from_url: str, *args, **kwargs):
+
     # add comman content here
     context = {
         "pokemon_id": pokemon_id_from_url,

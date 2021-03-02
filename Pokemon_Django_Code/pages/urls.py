@@ -17,16 +17,16 @@ urlpatterns = [
     ),
 
     path(
-        'info/pokemon/<int:pokemon_id_from_url>/',
+        'info/pokemon/<str:pokemon_id_from_url>/',
         pokemon_id_info_view,
         name='type_id_info'
     ),
 
-    path(
-        'info/pokemon/<str:pokemon_name_from_url>/',
-        pokemon_name_info_view,
-        name='type_name_info'
-    ),
+    # path(
+    #     'info/pokemon/<str:pokemon_name_from_url>/',
+    #     pokemon_name_info_view,
+    #     name='type_name_info'
+    # ),
 
     # type of pokemon ( catagories ) like water, fire, grass, etc
     path(
