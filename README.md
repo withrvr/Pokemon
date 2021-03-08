@@ -1,10 +1,10 @@
-# I am trying to make my own Pokemon-Pokedex and related to pokemon
+# Making my own Pokedex and Pokemon related stuff :
 
--   Because of the big fan of pokemon
+-   Because I am big fan of Pokemon
 -   and as a programmer thinking what to do
--   So started creating a project on pokemon Pokedex
+-   So started creating a project on Pokedex and Pokemon
 
-# URL's of Project
+# URL's of Project :
 
 -   Home page ( Not developed yet ):<br>
     `https://localhost8000/home/`
@@ -13,18 +13,23 @@
 -   Specific pokemon info:<br>
     `https://localhost8000/info/pokemon/:Pokemon_ID/`
 
-# Link's
+# Link's :
 
 -   [Pokemon Official Site](https://www.pokemon.com/us/)
 -   [Pokemon API I am using](https://pokeapi.co/)
 
-# How to execute ( or Steps to Follow)
+# How to execute ( or Steps to Follow) :
 
--   In terminal go to Base Directroy [`Pokemon_Django_Code/`](Pokemon_Django_Code/manage.py)
 -   Fork and Pull -- OR -- Clone the Repo
--   Download Python
--   Install Django Module ( in terminal ) `pip install django`
--   ```
+-   Main Code Base Directroy is [`Pokemon_Django_Code/`](Pokemon_Django_Code/)
+
+## In terminal now
+
+-   Download Python ( if not )
+-   Install Django Module :- `pip install django` ( if not )
+-   Some More and done :
+
+    ```
     python manage.py makemigrations
     python manage.py migrate
     python manage.py makemigrations
